@@ -88,8 +88,8 @@ public class TestUtils {
             List<JSONObject> filteredShowIdList = filterJsonListByShowIdValue(jsonList, showId);
             List<JSONObject> opportunities = getOpportunities(filteredShowIdList);
 
-            for (int i = 0; i < opportunities.size(); i++) {
-                Timestamp originalEventTime = new Timestamp(opportunities.get(i).getLong("originalEventTime"));
+            for (JSONObject opportunity : opportunities) {
+                Timestamp originalEventTime = new Timestamp(opportunity.getLong("originalEventTime"));
                 if (!timestamps.contains(originalEventTime)) {
                     timestamps.add(originalEventTime);
                 }
