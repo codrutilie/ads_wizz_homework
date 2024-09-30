@@ -80,7 +80,6 @@ public class TestUtils {
      * @return a HashMap where the key is the "showId" and the value is a string of format "EEE HH:mm"
      */
     public HashMap<String, String> getWeeklyPodcasts() {
-        List<Timestamp> sortedTimestampsWithoutDuplicates;
         HashMap<String, String> timestampHashMap = new HashMap<>();
         Set<String> showIdSet = getListOfValuesByKeyFromDownloadIdentifierJson("showId");
 
